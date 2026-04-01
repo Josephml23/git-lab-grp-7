@@ -37,4 +37,8 @@ public class StudentModel {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public String mostrarDatos() {
+        return "ID: " + id + ", Nombre: " + nombre + ", Apellido: " + apellido;
+    }
 }
