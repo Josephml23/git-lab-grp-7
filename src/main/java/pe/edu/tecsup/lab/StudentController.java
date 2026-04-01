@@ -5,27 +5,35 @@ import java.util.List;
 
 public class StudentController {
 
-    // Método principal para ejecutar y probar la clase
     public static void main(String[] args) {
         StudentController controller = new StudentController();
         List<String> listaAlumnos = controller.getStudents();
 
-        System.out.println("\n--- REPORTE DEL GRUPO 7 ---");
-        for (String alumno : listaAlumnos) {
-            System.out.println("Estudiante: " + alumno);
+        // Formato de reporte mejorado
+        System.out.println("\n==================================");
+        System.out.println("   REPORTE OFICIAL - GRUPO 7");
+        System.out.println("==================================");
+        
+        for (int i = 0; i < listaAlumnos.size(); i++) {
+            System.out.println((i + 1) + ". " + listaAlumnos.get(i));
         }
+        
+        System.out.println("----------------------------------");
+        System.out.println("Total de estudiantes registrados: " + listaAlumnos.size());
+        System.out.println("==================================\n");
     }
 
-    // Tu lógica original
     public List<String> getStudents() {
         List<String> students = new ArrayList<>();
         
-        // Lógica agregada: Listado inicial de alumnos
+        // Listado actualizado de los integrantes
         students.add("Josep - Responsable");
-        students.add("Alumno 2");
-        students.add("Alumno 3");
+        students.add("Alumno 2 - Desarrollador");
+        students.add("Alumno 3 - Analista");
         
-        System.out.println("Listando alumnos del grupo 7...");
+        // Mensaje de estado para trazabilidad
+        System.out.println("[INFO] Procesando base de datos de estudiantes...");
+        
         return students;
     }
 }
