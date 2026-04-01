@@ -20,7 +20,17 @@ public class StudentReport {
     }
 
     public void printReport() {
-        System.out.println("Estudiante: " + studentName);
-        System.out.println("Promedio Final: " + calculateAverage());
+        
+        String formattedName = studentName.toUpperCase();
+        double average = calculateAverage();
+        
+        System.out.println("REPORTE OFICIAL");
+        System.out.println("Estudiante: " + formattedName);
+        
+        if (average >= 11) { // Suponiendo escala vigesimal
+            System.out.println("Estado: APROBADO con " + average);
+        } else {
+            System.out.println("Estado: DESAPROBADO con " + average);
+        }
     }
 }
